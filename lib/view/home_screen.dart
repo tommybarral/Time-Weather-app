@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_weather_app/view/settings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -31,10 +32,14 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-            Icon(Icons.search, color: Colors.black, size: 25,),
-            SizedBox(width: 15,),
-            Icon(Icons.more_vert, color: Colors.black, size: 25),
-            SizedBox(width: 15,),
+            const Icon(Icons.search, color: Colors.black, size: 25,),
+            const SizedBox(width: 15,),
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(SettingsScreen.routeName);
+              },
+                icon: const Icon(Icons.more_vert, color: Colors.black, size: 25)),
+            const SizedBox(width: 15,),
             ],
           ),
         ),
