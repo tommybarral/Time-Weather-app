@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:time_weather_app/view/home_screen.dart';
-import 'package:time_weather_app/view/settings_screen.dart';
+import './view/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +23,6 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(),
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
-        SettingsScreen.routeName: (context) => const SettingsScreen(),
       },
     );
   }
